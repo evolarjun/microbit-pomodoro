@@ -98,7 +98,7 @@ let ms_multiplier = 60000
 //  number of ms in a minute (reduce to accelerate timer)
 running = 0
 updatedisplay = 1
-loops.everyInterval(ms_multiplier / 10, function on_every_interval() {
+loops.everyInterval(ms_multiplier / 20, function on_every_interval() {
     
     if (running == 1) {
         left += 0 - 0.1

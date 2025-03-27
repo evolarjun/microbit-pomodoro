@@ -115,4 +115,4 @@ def on_every_interval():
                 . . . . .
                 . . . . .
                 """)
-loops.every_interval(ms_multiplier / 10, on_every_interval)
+loops.every_interval(ms_multiplier / 20, on_every_interval)

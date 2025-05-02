@@ -2,7 +2,6 @@
 function updateTimerDisplay(t: number) {
     
     t2 = t
-    max_brightness = 150
     brightness = (t - Math.trunc(t)) * max_brightness
     for (let row = 0; row < 5; row++) {
         for (let col = 0; col < 5; col++) {
@@ -84,7 +83,7 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
 })
 let left = 0
 let brightness = 0
-let max_brightness = 0
+let max_brightness = 150
 let t2 = 0
 let updatedisplay = 0
 let running = 0
@@ -98,6 +97,7 @@ let ms_multiplier = 60000
 //  number of ms in a minute (reduce to accelerate timer)
 running = 0
 updatedisplay = 1
+radio.off()
 loops.everyInterval(ms_multiplier / 20, function on_every_interval() {
     
     if (running == 1) {
@@ -107,8 +107,8 @@ loops.everyInterval(ms_multiplier / 20, function on_every_interval() {
         }
         
         if (left <= 0) {
-            Alert()
             running = 0
+            Alert()
         }
         
     } else if (updatedisplay == 1) {

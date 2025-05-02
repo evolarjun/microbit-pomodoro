@@ -2,7 +2,6 @@
 def updateTimerDisplay(t: number):
     global t2, max_brightness, brightness
     t2 = t
-    max_brightness = 150
     brightness = (t - int(t)) * max_brightness
     for row in range(5):
         for col in range(5):
@@ -74,7 +73,7 @@ input.on_button_pressed(Button.B, on_button_pressed_b)
 
 left = 0
 brightness = 0
-max_brightness = 0
+max_brightness = 150
 t2 = 0
 updatedisplay = 0
 running = 0
@@ -88,6 +87,7 @@ ms_multiplier = 60000
 # number of ms in a minute (reduce to accelerate timer)
 running = 0
 updatedisplay = 1
+radio.off()
 
 def on_every_interval():
     global left, running
@@ -96,8 +96,8 @@ def on_every_interval():
         if updatedisplay == 1:
             updateTimerDisplay(left)
         if left <= 0:
-            Alert()
             running = 0
+            Alert()
     elif updatedisplay == 1:
         if time == 25:
             basic.show_leds("""

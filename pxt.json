@@ -1,5 +1,5 @@
 {
-    "name": "Timer test 2 - Copy",
+    "name": "pomodoro-timer",
     "description": "",
     "dependencies": {
         "core": "*",

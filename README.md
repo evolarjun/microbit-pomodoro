@@ -1,6 +1,10 @@
 
 > Open this page at [https://evolarjun.github.io/microbit-pomodoro/](https://evolarjun.github.io/microbit-pomodoro/)
 
+## Note!
+
+I gave up on the Make:Code version and switched to micropython even though the Microsoft Make:Code IDE is much fancier. I got frustrated, probably because I started out in the "visual" programming mode so the python code I ended up editing was even messier than my usual. I got something more responsive working in micropython at https://github.com/evolarjun/microbit-pomodoro2.
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
